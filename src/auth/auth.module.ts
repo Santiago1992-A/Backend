@@ -9,8 +9,8 @@ import { PassportModule } from '@nestjs/passport';
 @Module({
   // Define las importaciones, controladores y proveedores de este módulo.
   imports: [
-    UsersModule, // Importa el módulo de usuarios para usar sus servicios.
-    PassportModule, // Importa el módulo de Passport para la autenticación.
+    UsersModule,
+    PassportModule,
     JwtModule.register({
       // Configura el módulo de JWT con las opciones necesarias.
       secret: 'secretKey', // Define la clave secreta para firmar los tokens.

@@ -8,10 +8,14 @@ import { UpdateTaskDto } from './update-task.dto';
 export class TaskService {
   constructor(private prisma: PrismaService) {} // Inyecta el servicio de Prisma a través del constructor.
 
-  // Método para obtener todas las tareas de un usuario específico.
-  async getAllTasks(userId: number): Promise<Task[]> {
+  // Método para obtener todas las tareas de un usuario específico con un filtro opcional por estado.
+  async getAllTasks(userId: number, status?: string): Promise<Task[]> {
+    const where: any = { userId };
+    if (status) {
+      where.status = status; // Agrega el filtro por estado si se proporciona.
+    }
     return this.prisma.task.findMany({
-      where: { userId }, // Filtra las tareas por el userId proporcionado.
+      where, // Filtra las tareas por el userId y opcionalmente por el estado proporcionado.
     });
   }
 

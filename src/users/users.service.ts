@@ -28,4 +28,13 @@ export class UsersService {
       where: { id }, // Filtra el usuario por el ID proporcionado.
     });
   }
+
+  // Método para obtener todos los usuarios, con un filtro opcional por nombre de usuario.
+  async getAllUsers(username?: string): Promise<User[]> {
+    const where: any = {};
+    if (username) {
+      where.username = username; // Agrega el filtro por nombre de usuario si se proporciona.
+    }
+    return this.prisma.user.findMany({ where });
+  }
 }
