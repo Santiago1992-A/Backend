@@ -42,7 +42,9 @@ cd gestion-tareas-backend
 
 Ejecuta el siguiente comando para instalar las dependencias del proyecto:
 
+```bash
 npm install
+```
 
 ## 3. Configurar variables de entorno
 
@@ -54,17 +56,26 @@ DATABASE_URL="mysql://root:admin@localhost:3306/task"
 
 Ejecuta el siguiente comando para aplicar las migraciones de Prisma y configurar la base de datos:
 
+```bash
 npx prisma migrate dev
+
+```
 
 ## 5. Iniciar el servidor
 
 Puedes ejecutar el servidor en dos modos diferentes:
 
 -**Modo desarrollo**:
+
+```bash
 npm run start:dev
+```
 
 -**Modo producción:**
+
+```bash
 npm run start:prod
+```
 
 ## 6. Acceder a la documentación de la API
 
