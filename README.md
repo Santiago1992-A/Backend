@@ -84,4 +84,8 @@ http://localhost:3000/swagger
 
 ## Scripts Disponibles
 
--**npm run start:** Inicia la aplicación en modo producción. -**npm run start:** dev: Inicia la aplicación en modo desarrollo. -**npm run build:** Compila la aplicación. -**npm run test:** Ejecuta las pruebas. -**npm run lint:** Analiza el código para encontrar problemas.
+- **npm run start:** Inicia la aplicación en modo producción.
+- **npm run start:dev:** Inicia la aplicación en modo desarrollo.
+- **npm run build:** Compila la aplicación.
+- **npm run test:** Ejecuta las pruebas.
+- **npm run lint:** Analiza el código para encontrar problemas
